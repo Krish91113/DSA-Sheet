@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 public class secondLargestElement {
     private static int secondLargest(int nums[]){

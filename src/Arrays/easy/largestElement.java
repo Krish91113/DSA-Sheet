@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 public class largestElement {
     public static int largest (int [] arr){

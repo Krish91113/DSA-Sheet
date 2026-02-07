@@ -1,8 +1,8 @@
-package Arrays;
+package Arrays.easy;
 
 import java.util.Scanner;
 
-public class singleNumber {
+public class leftRotateArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -10,10 +10,13 @@ public class singleNumber {
         for(int i=0;i< nums.length;i++){
             nums[i]=sc.nextInt();
         }
-        int xor = 0;
-        for(int i=0;i<nums.length;i++){
-            xor = xor ^ nums[i];
+        int temp=nums[0];
+        for(int i=1;i<nums.length;i++){
+            nums[i-1]=nums[i];
         }
-        System.out.println(xor);
+        nums[nums.length-1]=temp;
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i] + " ");
+        }
     }
 }

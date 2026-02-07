@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 import java.util.*;
 public class removeDuplicates {
     public static int removeDuplicate(int[] nums) {

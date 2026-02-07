@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 import java.util.*;
 public class checkArrayIsSorted {
     private static boolean checkArraySort(int nums[]){

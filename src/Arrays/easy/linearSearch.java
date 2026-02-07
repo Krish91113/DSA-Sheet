@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 import java.util.*;
 public class linearSearch {
     private static int linearSearches(int nums[], int target){
