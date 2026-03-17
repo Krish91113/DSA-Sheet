@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class findSqrtOfNumber {
     private static int findsqrt(int n){
         int low =0,high=n,ans= 0;
-        while(low<= high){
+        while(low <= high){
             int mid = low + high /2 ;
             if(mid * mid <= n){
                 ans =mid;
