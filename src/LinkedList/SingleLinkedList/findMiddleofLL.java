@@ -1,13 +1,13 @@
 package LinkedList.SingleLinkedList;
 import java.util.*;
-class Node{
-    int data;
-    Node next;
-    Node(int val){
-        data =val;
-        next =null;
-    }
-}
+//public class Node{
+//    int data;
+//    Node next;
+//    Node(int val){
+//        data =val;
+//        next =null;
+//    }
+//}
 public class findMiddleofLL {
     public static Node findMiddle(Node head){
 //        Node temp =head;
