@@ -2,15 +2,15 @@ package LinkedList.SingleLinkedList;
 
 import java.util.*;
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int val) {
-        data = val;
-        next = null;
-    }
-}
+//class Node {
+//    int data;
+//    Node next;
+//
+//    Node(int val) {
+//        data = val;
+//        next = null;
+//    }
+//}
 
 public class reverseLL {
 
