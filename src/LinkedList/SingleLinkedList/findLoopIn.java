@@ -1,14 +1,14 @@
 package LinkedList.SingleLinkedList;
 import java.util.*;
-class Node {
-    int data;
-    Node next;
-
-    Node(int val) {
-        data = val;
-        next = null;
-    }
-}
+//class Node {
+//    int data;
+//    Node next;
+//
+//    Node(int val) {
+//        data = val;
+//        next = null;
+//    }
+//}
 public class findLoopIn {
     public static void main(String[] args) {
 
