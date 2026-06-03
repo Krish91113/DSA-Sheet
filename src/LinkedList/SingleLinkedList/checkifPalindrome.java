@@ -10,32 +10,33 @@ class Node {
     }
 }
 public class checkifPalindrome {
-    public static boolean palindrome(int n){
-        int temp =n,ld=0;
-        while(temp > 0){
-            int rem =temp % 10;
-            ld = rem + (ld*10);
-            temp/=10;
+    public static Node findMid(Node head){
+        Node slow =head;
+        Node fast=head;
+        while(fast!=null && fast.next!= null){
+            slow=slow.next;
+            fast=fast.next.next;
         }
-        while(n>0 && ld > 0){
-            int rem1 =n%10;
-            int rem2 = ld % 10;
-            if(rem1 != rem2) return false;
-            n/=10;
-            ld/=10;
-        }
-        return true;
+        return slow;
     }
     public static boolean checkPalindrome(Node head){
-        int n=0,sum=0,c=1;
-        Node temp=head;
-        while(temp!= null){
-            n=temp.data;
-            sum+=n + (sum * c);
-            c*=10;
-            temp=temp.next;
+        if(head == null || head.next == null) return true;
+        Node mid =findMid(head);
+        Node prev =null;
+        Node curr=mid;
+        while(curr!= null){
+            Node next =curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
         }
-        return palindrome(sum);
+        curr=head;
+        while(prev!= null){
+            if(prev.data != curr.data) return false;
+            prev=prev.next;
+            curr=curr.next;
+        }
+        return true;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
