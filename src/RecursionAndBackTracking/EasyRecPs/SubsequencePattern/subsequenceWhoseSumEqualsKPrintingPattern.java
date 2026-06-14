@@ -2,8 +2,8 @@ package RecursionAndBackTracking.EasyRecPs.SubsequencePattern;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class subsequenceWhoseSumEqualsK {
+// printing all subsequences
+public class subsequenceWhoseSumEqualsKPrintingPattern {
     public static void printf(int i,ArrayList<Integer> li,int nums[], int n, int sum, int k){
         if(i>=n){
             if(sum == k){
