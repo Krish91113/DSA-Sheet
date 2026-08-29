@@ -1,0 +1,53 @@
+package Trees.BinaryTree;
+import java.util.*;
+class Node{
+    int val;
+    Node left;
+    Node right;
+    Node(int val){
+        this.val=val;
+    }
+}
+public class Inorder {
+    public static Node buildTree(Scanner sc){
+        System.out.println("Enter root value: ");
+        int value=sc.nextInt();
+        if(value == -1) return null;
+        Node root =new Node(value);
+        Queue<Node> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            Node curr=q.poll();
+            System.out.println("Enter left child of : " + curr.val);
+            int leftVal=sc.nextInt();
+            if(leftVal!=-1){
+                curr.left=new Node(leftVal);
+                q.offer(curr.left);
+            }
+            System.out.println("Enter right child of : " + curr.val);
+            int rightVal=sc.nextInt();
+            if(rightVal!=-1){
+                curr.right=new Node(rightVal);
+                q.offer(curr.right);
+            }
+        }
+        return root;
+    }
+    public static void inorder(Node root,List<Integer> ans){
+
+        if(root == null) return ;
+        inorder(root.left,ans);
+        ans.add(root.val);
+        inorder(root.right,ans);
+
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Node root=buildTree(sc);
+        List<Integer> li =new ArrayList<>();
+        inorder(root,li);
+        for(int i=0;i<li.size();i++){
+            System.out.print(li.get(i)+"");
+        }
+    }
+}
